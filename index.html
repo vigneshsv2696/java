@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>First Assinment of JavaScript</h1>
+    <p id="demo"> first question answer is </p>
+<button onclick="myfun()">click me</button>
+
+
+  </br>
+</br>
+    <script>
+    // question 1
+      function myfun() {
+       var  str1="today is ";
+        var str2=" a beautiful day"; 
+        var str3="in Hawali";
+        console.log(str1.toUpperCase()+" "+str2+" "+str3.toLowerCase());
+
+       document.getElementById("demo").innerHTML= document.write(("Result is :")+"  "+str1.charAt(0).toUpperCase()+str1.slice(1)+"   "+str2+"    "+str3.charAt(0).toUpperCase()+str3.substring(1));
+      }
+      
+    </script>
+    <input placeholder="Enter the non-alphabet value" id="demo2" etype="text"> 
+ <button    onclick="myfun1()">alphabet click me</button>
+ <p id="demo1"> second question answer is </p>
+</br>
+</br>
+    <script>
+       //question 2
+       function myfun1() {
+        var alphabet;
+        var nonalphabet= document.getElementById('demo2').value;
+        switch(nonalphabet)
+        {
+          case 'a':
+               alphabet=("The output is :a");
+               console.log("the alphabet value is a");
+               break;
+               case 'b':
+               alphabet=("The output is :b");
+               console.log("the alphabet value is ");
+               break;
+               case 'c':
+               alphabet=("The output is :c");
+               console.log("the alphabet value is c");
+               break;
+               case 'd' :
+               alphabet=("The output is :d");
+               console.log("the alphabet value is d ");
+               break;
+               default:
+               alphabet="Undefind alphabet";
+               console.log(" Undefind alphabet");
+               break;
+
+          
+        }
+        document.getElementById("demo1").innerHTML=alphabet;
+  
+      }
+
+    </script>
+  <p> the third question </p> 
+  <div>
+    <input type="text"  id="input1" placeholder="first input"> 
+  </div> 
+
+<input type="text"  id="input2" placeholder="second input">
+<input type="text"  id="result" placeholder="result">
+
+<div>
+  <input type="text"  id="operator" placeholder="Enter arithimatic operator">
+</div>
+
+
+<button onclick="myfun2()">click me</button>
+    <script>
+//question 3
+function myfun2()
+{
+    
+  var num1=Number(document.getElementById("input1").value);
+  var num2=Number(document.getElementById("input2").value);
+  var operator=document.getElementById("operator").value;
+  
+
+  switch(operator)
+  {
+    case "+":
+    document.getElementById("result").value =num1+num2;
+   
+    console.log("the output is ="+(num1+num2));
+    break;
+      case "-":
+      document.getElementById("result").value =num1-num2;
+   
+      console.log("the output is ="+(num1-num2));
+      break;
+      case "*":
+      document.getElementById("result").value =num1*num2;
+   
+      console.log("the output is ="+(num1*num2));
+      break;
+      case "/":
+      document.getElementById("result").value =num1/num2;
+   
+      console.log("the output is ="+(num1/num2));
+      break;
+      default:
+      document.getElementById("result").value ="Undefind Operator";
+      console.log("Undefind Operator");
+      break;
+    
+      
+  }
+
+ 
+}
+
+    </script>
+  </br>
+</br>
+</br>
+    <div>
+
+    </div>
+      <input id="val1"  placeholder="enter the value">
+      <input id="val2"  placeholder="enter the value">
+      <input id="val3"  placeholder="enter the value">
+      <button onclick="myfun3()">click me</button>
+
+    <script>
+
+    
+        
+        function myfun3() {
+
+        
+          
+        var side1=Number(document.getElementById("val1").value);
+        var side2=Number(document.getElementById("val2").value);
+        var side3=Number(document.getElementById("val3").value);
+
+          if(side1 == side2&&side1 == side3){
+          
+            console.log("equilateral Triangle")
+          }
+          else if (side1 == side2||side2 == side3||side1 == side3){
+            console.log("isosceles triangle")
+          }
+          else{
+            console.log("scalene triangle")
+          }
+        }
+     
+    </script>
+  </br>
+</br>
+</br>
+      <input id="current" type="text"placeholder="enter the units">
+     <p id="amount"> the amout is :</p> 
+    <button onclick="myfun4()">click me</button>
+    <script>
+    
+      
+      function myfun4(){
+        var u=parseInt(document.getElementById("current").value);
+        var bill=0;
+      
+      
+        if(u>0&&u<=50)
+
+        {
+         bill=u*0.5;
+          document.getElementById("amount").innerHTML=bill;
+          console.log( "the bill amount is :"+(bill))
+        }
+        else if(u>51 && u<=150)
+        {
+          bill=(u*0.75)
+          document.getElementById("amount").innerHTML=bill;
+          console.log( "the bill amount is :"+bill)
+        }
+       else if(u>151 && u<=250)
+        {
+          bill=(u*1.2)
+          document.getElementById("amount").innerHTML=bill;
+          console.log( "the bill amount is :"+bill)
+        }
+
+        else if(u>251 && u<=300){
+          
+          bill=(u*1.5);
+          document.getElementById("amount").innerHTML=bill;
+          console.log( "the bill amount is :"+bill)
+        }
+        else
+        {
+          console.log( "undefind")
+        }
+      }
+    </script>
+
+
+
+    
+  
+      
+
+  </body>
+</html>
+ 
+    
